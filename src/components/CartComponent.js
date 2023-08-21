@@ -28,7 +28,7 @@ const Cart = ({ isModalOpen, toggleModal }) => {
                     <p>{item.name}</p>
                   </Col>
                   <Col xs={2}>
-                    <p>${item.price}</p>
+                    <p>Rs.{item.price}</p>
                   </Col>
                   <Col xs={2}>
                     <Button color="danger" onClick={() => removeFromCart(item.id)}>
@@ -40,7 +40,7 @@ const Cart = ({ isModalOpen, toggleModal }) => {
             ))}
           </ul>
           <div className="text-center mt-4">
-            <h5>Total Price: ${calculateTotalPrice().toFixed(2)}</h5>
+            <h5>Total Price: Rs.{calculateTotalPrice().toFixed(2)}</h5>
             <Button color="primary" onClick={clearCart}>
               Clear Cart
             </Button>

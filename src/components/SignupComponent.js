@@ -5,7 +5,9 @@ import {useNavigate } from 'react-router-dom';
 
 const SignupFormModal = () => {
   const [showModal, setShowModal] = useState(false);
+
   const [username, setUsername] = useState('');
+  
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -65,10 +67,16 @@ const SignupFormModal = () => {
         </Modal.Header>
         <Modal.Body>
           {registrationMessage && <p style={{ color: 'green' }}>{registrationMessage}</p>}
+
+
+
           <div className='signup-form signup-form-container signup-form label signup-form inpu signup-form button signup-form button:hover success-message error-message signup-form-container' >
             <label>Username:</label>
             <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
           </div>
+
+
+
           <div className='signup-form signup-form-container signup-form label signup-form inpu signup-form button signup-form button:hover success-message error-message signup-form-container'>
             <label>Number:</label>
             <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} required />

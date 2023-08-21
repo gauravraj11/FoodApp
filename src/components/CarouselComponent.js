@@ -7,10 +7,10 @@ export default function Carousel() {
 
                 <div className="carousel-inner " id='carousel'>
                     <div class=" carousel-caption  " style={{ zIndex: "9" }}>
-                        <form className=" d-flex justify-content-center">  
+                        {/* <form className=" d-flex justify-content-center">  
                             <input className="form-control me-2 w-75 bg-white text-dark" type="search" placeholder="Type in..." aria-label="Search" />
                             <button className="btn text-white bg-success" type="submit">Search</button>
-                        </form>
+                        </form> */}
                     </div>
                     <div className="carousel-item active" >
                         <img src="https://source.unsplash.com/random/500x300/?burger" className="d-block w-100  " style={{ filter: "brightness(30%)" }} alt="..." />

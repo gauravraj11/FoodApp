@@ -7,6 +7,7 @@ const Login = () => {
   const [number, setNumber] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  
   const [loginMessage, setloginMessage] = useState('');
   
 
@@ -26,6 +27,7 @@ const Login = () => {
       });
 
       if (response.ok) {
+
         setShowModal(false);
         setloginMessage('Login successful!');
         const responseData = await response.json();
@@ -62,14 +64,17 @@ const Login = () => {
         </Modal.Header>
         <Modal.Body>
           {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
+
           <div className='signup-form signup-form-container signup-form label signup-form inpu signup-form button signup-form button:hover success-message error-message signup-form-container' >
             <label>Number:      </label>
             <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} required />
           </div>
+
           <div className='signup-form signup-form-container signup-form label signup-form inpu signup-form button signup-form button:hover success-message error-message signup-form-container' >
             <label>Password:    </label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

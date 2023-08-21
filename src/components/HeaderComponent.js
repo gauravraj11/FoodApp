@@ -51,11 +51,13 @@ export default function HeaderComponent() {
                             
                             </Nav>
                             <Nav>
+
                             <Button variant="outline-light" onClick={addToCart} className="cart-button">
                             <FaShoppingCart />
                             Cart 
                             <Badge bg="secondary">{cart.length}</Badge>
                             </Button>
+                            
                         </Nav>
                                             
                         </Collapse>
